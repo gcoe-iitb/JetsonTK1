@@ -1,7 +1,11 @@
 #simply revising bash scripting:
 echo  "This script will help you flash Linux for Tegra on Jetson"
+#Remove comments if you want to download 
+#wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v4.0/Tegra124_Linux_R21.4.0_armhf.tbz2
 tar -xvf Tegra124_Linux_R21.2.0_armhf.tbz2
 cd Linux_for_Tegra/rootfs
+#Remove comment below if you want to download
+#wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v4.0/Tegra_Linux_Sample-Root-Filesystem_R21.4.0_armhf.tbz2
 tar xpf ../../Tegra_Linux_Sample-Root-Filesystem_R21.2.0_armhf.tbz2
 
 #Apply binaries:
@@ -25,6 +29,7 @@ if [[ $answer = y || $answer = yes ]] ; then
   echo "So lets flash jetson now !"
 else
     echo "please put jetson in recovery mode and run the script again."
+    
 fi
 
 #Final flash
